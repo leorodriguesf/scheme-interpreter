@@ -1,0 +1,10 @@
+; REPL
+
+(define (calc)
+ (display "calc: ")
+ (flush)
+ (print (calc-eval (read)))
+ (calc))
+
+(define (calc-eval exp)
+  (print exp))
