@@ -1,4 +1,4 @@
-; REPL
+; This implementation simulates an interpreter using applicative-order evaluation
 
 (define (accumulate fn base lst)
   (if (null? lst)
@@ -10,6 +10,7 @@
         ((= (car lst) 0) #t)
         (else (any-zero? (cdr lst)))))
 
+; REPL
 (define (calc)
  (display "calc: ")
  (flush)
@@ -18,7 +19,7 @@
 
 (define (calc-eval exp)
   (cond ((number? exp) exp)
-        ; Mutual recursion using applicative-order evaluation
+        ; Mutual recursion 
         ((list? exp) (calc-apply (car exp) (map calc-eval (cdr exp))))
         (else (error "Bad expression:" exp))))
         

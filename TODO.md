@@ -1,2 +1,0 @@
-- [ ] Check applicate-order evaluation with print
-- [ ] Try normal-order evaluation
