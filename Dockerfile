@@ -5,8 +5,8 @@
 # From: https://github.com/egallesio/STklos/blob/master/etc/Docker/Dockerfile.stable
 
 # To build the image
-#    $ docker build -t stklos .  
-#
+#    $ docker build --platform linux/amd64 -t stklos .
+
 # To run the image:
 #    $ docker run -ti -v $(pwd):/home stklos
 

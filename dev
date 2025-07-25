@@ -8,5 +8,5 @@ fi
 if [ "$(docker images -q stklos)" != "" ]; then
   docker run -ti -v $(pwd):/home stklos 
 else
-  docker build -t stklos .  
+  docker build --platform linux/amd64 -t stklos .
 fi
